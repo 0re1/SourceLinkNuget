@@ -4,6 +4,10 @@ namespace SourceLinkNuget
 {
     public class Class1
     {
+        public void NewTest()
+        {
+            Console.WriteLine("changed test");
+        }
         public void Test()
         {
             Console.WriteLine("test");
