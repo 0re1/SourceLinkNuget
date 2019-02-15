@@ -1,4 +1,5 @@
 ﻿using System;
+using PrivateSourceLinkNuget;
 
 namespace SourceLinkNuget
 {
@@ -11,6 +12,8 @@ namespace SourceLinkNuget
         public void Test()
         {
             Console.WriteLine("test");
+            var c = new PrivateClass1();
+            c.PrivateRepoTest();
             /*
              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum felis a suscipit scelerisque. In justo diam, tincidunt eget justo sed, gravida vulputate turpis. Vivamus sagittis odio vulputate lacus varius, a ullamcorper lacus ornare. Praesent maximus aliquet porttitor. Nunc accumsan massa id dui hendrerit dignissim. In sit amet lectus ut metus posuere imperdiet. Donec vitae tortor id augue efficitur condimentum non in metus. Nulla facilisi. Nunc pharetra enim sed quam elementum rutrum. Proin bibendum cursus eros, eget imperdiet dolor mollis vel. Curabitur molestie, enim sed pellentesque elementum, quam felis interdum felis, eu malesuada turpis orci in odio. Donec gravida ornare est, lacinia tincidunt lorem aliquam nec. Nunc porttitor ipsum eu faucibus sagittis.
 
