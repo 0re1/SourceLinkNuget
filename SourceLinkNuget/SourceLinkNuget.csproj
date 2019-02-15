@@ -1,21 +1,42 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
+  <PropertyGroup>    
     <TargetFramework>netstandard2.0</TargetFramework>
-    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    
+    <!-- Ensures URL is added in order to serve for SourceLink -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-
     <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
 
-    <!-- Optional: Build symbol package (.snupkg) to distribute the PDB containing Source Link -->
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <Version>1.0.2</Version>
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>
+      Franta Pepa Jednicka[franta.pepa.jednicka@monster.com]
+      Franta Pepa Dvojka[franta.pepa.dvojka@monster.com]
+    </authors>
+
+    <!--  Owners are typically nuget.org identities that allow gallery
+          users to easily find other packages by the same owners.       -->
+    <owners>Phoenix team,PHX</owners>
+    <releaseNotes>Bug fixes and performance improvements</releaseNotes>
+
+    <!--  The description can be used in package manager UI. Note that the
+          nuget.org gallery uses information you add in the portal.     -->
+    <description>Core utility functions for web applications</description>
+    
+    <!-- Project URL provides a link for the gallery -->
+    <projectUrl>http://monster.github.com/PHX/UsefulStuff</projectUrl>
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>web utility http json url parsing</tags>
+    <Version>1.0.3</Version>
+    <!-- Copyright information -->
+    <copyright>Copyright ©2019 Monster </copyright>
+    
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SourceLink.Copy.PdbFiles" Version="2.8.3" PrivateAssets="All" />
+    <!--<DotNetCliToolReference Include="dotnet-sourcelink" Version="2.8.3" />-->
+    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-18618-05">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
